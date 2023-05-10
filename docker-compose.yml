@@ -1,0 +1,11 @@
+
+services:
+
+  web_app:
+    build: .
+    container_name: 'web_app'
+    command: "python3 manage.py runserver 0.0.0.0:8000"
+    ports:
+         - "8000:8000"
+    volumes:
+      - .:/app
